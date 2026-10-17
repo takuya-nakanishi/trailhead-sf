@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # クラウドのセッションで agent-commons が無ければ、どの依頼も処理せずに「agent-commons がない」と返させる。
-# 正本は agent-commons の templates/cloud-hook/agent-commons.sh。各リポジトリの .claude/hooks/ に同じものを置く
-# (全リポジトリで同じかは host/cloud/check-entry.sh で見る)。.claude/settings.json の SessionStart から呼ぶ。
+# 正本は agent-commons の templates/cloud-hook/agent-commons.sh。各リポジトリの .claude/hooks/ に同じものを置き、
+# .claude/settings.json の SessionStart から呼ぶ。
 #
 # クラウドでは agent-commons を必ずセッションに選ぶ運用(2026-10-17 本人。選ばないと clone の認証が通らない)。
 # 選ぶと複数リポジトリのセッションになり、リポジトリの hook は読まれない。だからこれが動くのは、
